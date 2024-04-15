@@ -1,0 +1,92 @@
+<!-- original : https://codepen.io/SeanNorton/pen/LWBXQL -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greeting2</title>
+
+    <style>
+
+        /*CSS RESETS*/
+
+body{
+    background-color: #191919;
+    line-height: 1.6;
+
+}
+
+h1 {
+    margin-top: 0;
+}
+
+
+/*CSS START*/
+
+.full-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card {
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+    background: #191919;
+    width: 85vw;
+    color: #fff;
+    display: inline-block;
+}
+
+.greet{
+    
+    display:inline;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.9rem;
+}
+
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,700" rel="stylesheet">
+
+<div class="full-table">
+  <div class="table-cell">
+    
+    <div class="card">
+        <div class="greet" id="greet"></div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<script>
+
+function greet() {
+    var today = new Date();
+    hrs = today.getHours();
+    if (hrs < 12)
+        greet = 'Good Morning, Ninjaabdullah';
+    else if (hrs >= 12 && hrs < 17)
+        greet = 'Good Afternoon, Ninjaabdullah';
+    else if (hrs >= 17 && hrs < 22)
+        greet = 'Good Evening, Ninjaabdullah';
+    else if (hrs >= 22 && hrs <= 3)
+        greet = 'Good Night, Ninjaabdullah'
+    document.getElementById('greet').innerHTML = greet;
+}
+
+greet()
+// END
+</script>
+
+</body>
+</html>
